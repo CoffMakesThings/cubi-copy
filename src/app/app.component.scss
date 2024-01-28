@@ -1,4 +1,27 @@
 .draggable-container {
   background-color: white;
   width: 500px;
+  height: 500px;
+}
+
+.interactable {
+  height: 100%;
+}
+
+.toolbar {
+  top: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+button {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+p {
+  display: inline;
+  font-size: 20px;
+  color: gainsboro;
+  font-family: Arial;
 }

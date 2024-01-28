@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { DraggableDirective } from "../draggable.directive";
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,19 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'cubi-copy';
-  scale: number = 1;
+  @ViewChild(DraggableDirective) draggableDirective!: DraggableDirective;
+  title: string = 'cubi-copy';
+  fontSize: number = 20;
+
+  center(): void {
+    this.draggableDirective.center();
+  }
+
+  textSizeUp(): void {
+    if (this.fontSize < 64) this.fontSize++;
+  }
+
+  textSizeDown(): void {
+    if (this.fontSize > 8) this.fontSize--;
+  }
 }
