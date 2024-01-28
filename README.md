@@ -2,6 +2,8 @@
 
 An implementation of some of the basic features from the CubiCasa editor tool.
 
+Includes pan, zoom, center and text resizing.
+
 Hosted here:
 
 https://cubi-copy.web.app/
